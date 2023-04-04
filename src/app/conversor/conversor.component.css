@@ -1,0 +1,15 @@
+.container{
+  background-color: whitesmoke;
+  font-size: larger;
+  text-align: center;
+  margin-top: 250px;
+  width: 550px;
+  height: 650px;
+}
+.body{
+  background-color: black;
+  font-size: larger;
+  text-align: center;
+  margin-top: 250px;
+  width: 550px;
+}
