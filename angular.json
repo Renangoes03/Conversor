@@ -92,11 +92,17 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {
+            "baseHref": "/Conversor/"
+          }
         }
       }
+    },
+    "cli": {
+      "analytics": "1a959235-e8d4-437c-a54e-ed5746695992"
     }
-  },
-  "cli": {
-    "analytics": "1a959235-e8d4-437c-a54e-ed5746695992"
   }
 }
