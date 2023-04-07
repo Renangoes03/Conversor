@@ -1,15 +1,84 @@
 <div class="container">
-  <h1><br><br><br>
-    Conversor
-  </h1>
+	<br>
+	<h1 class="h1">Conversor</h1>
+	<br>
 
-	<form>
-    <br>
-		<label for="metros">Insira a quantidade de metros:</label><br>
-		<input type="number" id="metros" name="metros"><br><br>
-		<input type="button" value="Converter" onclick="converter()"><br><br>
-		<label for="centimetros">Resultado:</label><br>
-		<input type="text" id="centimetros" name="centimetros" readonly>
-	</form>
+	<p>
+		<a class="btn btn-primary" data-bs-toggle="collapse" href="#GrausxRadiano" role="button" aria-expanded="false"
+			aria-controls="collapseExample">
+			Graus x Radiano
+		</a>
+	</p>
+	<div class="collapse" id="GrausxRadiano">
+		<div class="card card-body"><br>
+			<h2>Conversor de unidades</h2>
+			<label>
+				Graus:
+				<input type="number" name="graus" [(ngModel)]="graus">
+				<button (click)="converterParaRadianos()">Graus</button>
+			</label>
+			<p>{{ graus }} graus = {{ radianos }} radianos</p>
 
+			<label>
+				Radio:
+				<input type="number" name="radianos" [(ngModel)]="radianos">
+				<button (click)="converterParaGraus()">Radius</button>
+			</label>
+			<p>{{ radianos }} radianos = {{ graus }} graus</p>
+
+		</div>
+	</div>
+
+	<p>
+		<a class="btn btn-primary" data-bs-toggle="collapse" href="#AlturaxPés" role="button" aria-expanded="false"
+			aria-controls="collapseExample">
+			Altura x Pés
+		</a>
+	</p>
+	<div class="collapse" id="AlturaxPés">
+		<div class="card card-body"><br>
+
+			<h2>Conversor de altura</h2>
+			<label>
+				Mts:
+				<input type="number" [(ngModel)]="metros" (input)="converterParaPes()">
+			</label>
+			<button (click)="converterParaPes()">Metros</button>
+			<p>{{ metros }} m = {{ pes }} ft</p>
+
+			<label>
+				Pés:
+				<input type="number" [(ngModel)]="pes" (input)="converterParaMetros()">
+			</label>
+			<button (click)="converterParaMetros()">Pés</button>
+			<p>{{ pes }} ft = {{ metros }} m</p>
+
+		</div>
+	</div>
+
+	<p>
+		<a class="btn btn-primary" data-bs-toggle="collapse" href="#Polegadasxcentimetros" role="button" aria-expanded="false"
+			aria-controls="collapseExample">
+			Polegadas x centimetros
+		</a>
+	</p>
+	<div class="collapse" id="Polegadasxcentimetros">
+		<div class="card card-body"><br>
+			<h2>Conversor de unidades</h2>
+			<label>
+				Pole:
+				<input type="number" [(ngModel)]="polegadas" (input)="converterParaCentimetros()">
+			</label>
+			<button (click)="converterParaPolegadas()">polegadas</button>
+			<p>{{ polegadas }} polegadas = {{ centimetros }} centímetros</p>
+
+			<label>
+				Cent:
+				<input type="number" [(ngModel)]="centimetros" (input)="converterParaPolegadas()">
+			</label>
+			<button (click)="converterParaCentimetros()">centimetros</button>
+			<p>{{ centimetros }} centímetros = {{ polegadas }} polegadas</p>
+
+		</div>
+	</div>
 </div>
